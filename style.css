@@ -6,8 +6,8 @@
 }
 
 body {
-    background: #081b29;
-    color:#ededed;
+    background: #2a0000;  /*     background: #081b29; */
+    color:#adadad;
 }
 
 .header {
@@ -16,7 +16,10 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: transparent;
+
+    background: linear-gradient(0deg, rgba(42,0,0,1) 0%, rgba(0,0,0,1) 100%);
+
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,14 +28,14 @@ body {
 
 .logo {
     font-size: 25px;
-    color: #ededed;
+    color: #adadad;
     text-decoration: none;
     font-weight: 600;
 }
 
 .navbar a {
     font-size: 18px;
-    color: #ededed;
+    color: #adadad;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
@@ -41,12 +44,14 @@ body {
 
 .navbar a:hover, /* hover é uma pseudo classe que ativa estilos em um elemento através de uma ação do usuário*/
 .navbar a.active { /* serve para atualizar a estilização ao clicar*/
-    color:#00abf0
+    color:#3b3a3a
 }
 
 .home {
     height: 100vh; /* v = view, h = height , vh é toda altura visivel do navegador */
-    background: url('');
+    background: url('') no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     padding: 0 10%;
@@ -65,7 +70,7 @@ body {
 .home-content h3 {
     font-size: 36px;
     font-weight: 700;
-    color: #00abf0;
+    color: #3b3a3a;
 }
 
 .home-content p {
@@ -88,11 +93,11 @@ body {
     align-items: center;
     width: 150px;
     height: 100%;
-    background: #00abf0;
-    border: 2px solid #00abf0;
+    background: #3b3a3a;
+    border: 2px solid #3b3a3a;
     border-radius: 8px;
     font-size: 19px;
-    color: #081b29;
+    color: #adadad;
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 1px;
@@ -102,21 +107,21 @@ body {
 }
 
 .btn-box a:hover {
-    color: #00abf0;
+    color: #3b3a3a;
 }
 
 .btn-box a:nth-child(2) { /* seleciona um ou mais elementos com base em sua posição entre um grupo de elementos-irmãos*/
     background: transparent;
-    color: #00abf0;
+    color: #3b3a3a;
 }
 
 .btn-box a:nth-child(2):hover {
-    color: #081b29;
+    color: #2a0000;
 
 }
 
 .btn-box a:nth-child(2)::before {
-    background: #00abf0;
+    background: #3b3a3a;
 }
 
 .btn-box a::before {
@@ -126,7 +131,7 @@ body {
     left: 0;
     width: 0%;
     height: 100%;
-    background: #081b29;
+    background: #2a0000;
     z-index: -1;
     transition: .5s;
 }
@@ -151,10 +156,10 @@ body {
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #00abf0;
+    border: 2px solid #3b3a3a;
     border-radius: 50%;
     font-size: 20px;
-    color: #00abf0;
+    color: #3b3a3a;
     text-decoration: none;
     z-index: 1;
     overflow: hidden;
@@ -162,7 +167,7 @@ body {
 }
 
 .home-sci a:hover {
-    color:#081b29
+    color:#2a0000   
 }
 
 .home-sci a::before {
@@ -172,7 +177,7 @@ body {
     left: 0;
     width: 0;
     height: 100%;
-    background: #00abf0;
+    background: #3b3a3a;
     z-index: -1;
     transition: .5s;
 }
@@ -180,3 +185,61 @@ body {
 .home-sci a:hover::before {
     width: 100%;
 }
+
+.skills {
+    height: auto; /* Remova a altura fixa para permitir que a seção se expanda conforme necessário */
+    background: url('') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column; /* Alinhe os itens verticalmente */
+    align-items: center; /* Centralize os itens horizontalmente */
+    padding: 60px 10%; /* Ajuste o padding conforme necessário */
+    padding-bottom: 120px;
+}
+
+.skills h2 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px; /* Adicione margem inferior para separar os ícones */
+}
+
+.skills-icons {
+    display: flex;
+    justify-content: center; /* Centralize os ícones horizontalmente */
+}
+
+.skills-icons i {
+    font-size: 350px; /* Ajuste o tamanho dos ícones conforme necessário */
+    margin: 0 10px; /* Adicione margem horizontal entre os ícones */
+    color: #3b3a3a;
+}
+
+
+.education {
+    height: auto; /* Remova a altura fixa para permitir que a seção se expanda conforme necessário */
+    background: url('') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column; /* Alinhe os itens verticalmente */
+    align-items: center; /* Centralize os itens horizontalmente */
+    padding: 100px 10%; /* Ajuste o padding conforme necessário */
+}
+
+.education h2 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px; /* Adicione margem inferior para separar os ícones */
+}
+
+.education h3 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #3b3a3a;
+    margin-bottom: 20px; /* Adicione margem inferior para separar os ícones */
+}
+
